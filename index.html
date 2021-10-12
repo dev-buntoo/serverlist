@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Serverlist :: All Regions</title>
+        <meta http-equiv="content-Type" content="text/html; utf-8" />
+        <meta name="revisit-after" content="2 days" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="#" />
+        <link href="https://unpkg.com/tailwindcss@1.0.4/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+
+    <body>
+        <!-- Toggle B -->
+        <!-- <div class="flex items-center justify-center mx-auto absolute top-20 right-0 left-1/3">
+            <span class="pr-2">Light </span>
+            <label class="switch">
+                <input onclick="toggle()" type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <span class="pl-2"> Dark</span>
+        </div> -->
+
+        <main class="font-sans content-center flex flex-col h-screen">
+            <!-- navbar -->
+            <nav class="flex items-center justify-center flex-wrap p-6 nav-background">
+                <div class="flex items-center flex-shrink-0 mr-6 ml-5  md:w-4/5">
+                    <span class="font-semibold text-xl tracking-tight">SERVERLIST.TF</span>
+                </div>
+            </nav>
+            <!-- navbar ends -->
+
+
+            <div class="w-full md:w-4/5 mx-auto p-8 flex-grow">
+                <div class="my-5">
+                    <div class="inline-block relative w-64">
+                        <select class="block appearance-none w-full py-3 px-4 pr-8 rounded leading-tight select-box"
+                            id="region">
+                            <option style="background-color:rgb(55, 55, 55); color:white" selected value="all">All Regions</option>
+                            <option style="background-color:rgb(55, 55, 55); color:white" value="america">North America</option>
+                            <option style="background-color:rgb(55, 55, 55); color:white" value="europe">Europe</option>
+                            <option style="background-color:rgb(55, 55, 55); color:white" value="australia">Australia</option>
+                            <option style="background-color:rgb(55, 55, 55); color:white" value="asia">Asia</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-md">
+                    <div class="tab w-full overflow-hidden custom-tab">
+                        <input class="absolute opacity-0 " id="tab-multi-one" type="checkbox" name="tabs">
+                        <label class="block p-5 leading-normal cursor-pointer" for="tab-multi-one">Deathmatch</label>
+                        <div class="tab-content min-h-full border-left-yellow leading-normal overflow-x-auto">
+                            <div class="inline-block min-w-full shadow rounded-lg">
+                                <div class="p-5">
+                                    <table class="min-w-full leading-normal text-center w-full" id="deathMatchTable">
+                                        <thead class="table-header">
+                                            <tr>
+                                                <th
+                                                    class="px-5 py-3  text-left uppercase tracking-wider">
+
+                                                </th>
+                                                <th
+                                                    class="px-5 py-3  text-left uppercase tracking-wider">
+                                                    Deathmatch
+                                                </th>
+                                                <th
+                                                    class="px-5 py-3  text-left uppercase tracking-wider">
+                                                    Map
+                                                </th>
+                                                <th
+                                                    class="px-5 py-3  text-left uppercase tracking-wider">
+                                                    Players
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-body">
+                                            <tr region="europe" id="content">
+                                                <td class="px-5" id="flag">
+                                                    <img src="https://flagcdn.com/16x12/se.png"
+                                                        srcset="https://flagcdn.com/32x24/se.png 2x, https://flagcdn.com/48x36/se.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">Gabagool&#39;s
+                                                                DM #1
+                                                                (EU - SOAP DM)</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">cp_process_final</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr region="europe" id="content">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/se.png"
+                                                        srcset="https://flagcdn.com/32x24/se.png 2x, https://flagcdn.com/48x36/se.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">Gabagool&#39;s
+                                                                DM #2
+                                                                (EU - SOAP DM)</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">cp_gullywash_final1</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr region="europe" id="content">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/de.png"
+                                                        srcset="https://flagcdn.com/32x24/de.png 2x, https://flagcdn.com/48x36/de.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">Spenny.TF |
+                                                                DM
+                                                                #1</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">cp_sunshine</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr region="europe" id="content">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/de.png"
+                                                        srcset="https://flagcdn.com/32x24/de.png 2x, https://flagcdn.com/48x36/de.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">Spenny.TF |
+                                                                DM
+                                                                #2</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">cp_gullywash_final1</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr region="europe" id="content">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/de.png"
+                                                        srcset="https://flagcdn.com/32x24/de.png 2x, https://flagcdn.com/48x36/de.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">Spenny.TF |
+                                                                DM
+                                                                #3 |
+                                                                Codename Burger</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">cp_gravelpit</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr id="content" region="america">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/us.png"
+                                                        srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">The
+                                                                Spaceship -
+                                                                DM
+                                                                #1</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">cp_villa_b17a</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr id="content" region="america">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/us.png"
+                                                        srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">The
+                                                                Spaceship -
+                                                                DM
+                                                                #2</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">ctf_turbine_pro_rc4</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr id="content" region="america">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/us.png"
+                                                        srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">The
+                                                                Spaceship -
+                                                                DM
+                                                                #3</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">cp_snakewater_final1</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr id="content" region="america">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/us.png"
+                                                        srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">The
+                                                                Spaceship -
+                                                                DM #4 -
+                                                                Variety Maps</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">cp_gullywash_f1a</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr id="content" region="america">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/us.png"
+                                                        srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">The
+                                                                Spaceship -
+                                                                DM #5 -
+                                                                Sniper Allowed</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">koth_product_final</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                            <tr id="content" region="america">
+                                                <td class="px-5  " id="flag">
+                                                    <img src="https://flagcdn.com/16x12/us.png"
+                                                        srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                        width="16" height="12">
+                                                </td>
+                                                <td class="px-5 py-5   text-sm" id="name">
+                                                    <div class="flex items-center">
+                                                        <div class="ml-3">
+                                                            <a href="#" class=" whitespace-no-wrap">THE
+                                                                VINEYARD DM
+                                                                -
+                                                                Chicago NFO</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">cp_villa_b18</p>
+                                                </td>
+                                                <td class="px-5 py-5   text-sm">
+                                                    <p class=" whitespace-no-wrap">0/8</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab w-full overflow-hidden custom-tab">
+                        <input class="absolute opacity-0" id="tab-multi-two" type="checkbox" name="tabs">
+                        <label class="block p-5 leading-normal cursor-pointer" for="tab-multi-two">MGE</label>
+                        <div class="tab-content border-left-yellow leading-normal overflow-x-auto">
+                            <div class="p-5">
+                                <table class="min-w-full leading-normal" id="mgeTable">
+                                    <thead class="table-header">
+                                        <tr>
+                                            <th
+                                                class="px-5 py-3   text-left uppercase tracking-wider">
+
+                                            </th>
+                                            <th
+                                                class="px-5 py-3   text-left uppercase tracking-wider">
+                                                MGE
+                                            </th>
+                                            <th
+                                                class="px-5 py-3   text-left uppercase tracking-wider">
+                                                Map
+                                            </th>
+                                            <th
+                                                class="px-5 py-3   text-left uppercase tracking-wider">
+                                                Players
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-body">
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">[GFLClan.com]
+                                                            MGEMod |
+                                                            ELO | RANK | NEED STAFF</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">mge_training_v8_beta4b</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">3/32</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="asia" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/sg.png"
+                                                    srcset="https://flagcdn.com/32x24/sg.png 2x, https://flagcdn.com/48x36/sg.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">Panda-Community.com SG
+                                                            | MGE</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">mge_training_v8_beta4b</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">5/18</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/de.png"
+                                                    srcset="https://flagcdn.com/32x24/de.png 2x, https://flagcdn.com/48x36/de.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">tf2pickup.de
+                                                            MGE #1</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">mge_oihguv_sucks_a12</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/31</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">The Spaceship -
+                                                            ALLCLASS MGE Chillypunch</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">mge_chillypunch_final4_fix2</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">3/32</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">The Spaceship -
+                                                            ALLCLASS MGE Old-School Oihguv</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">mge_oihguv_sucks_a12</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/32</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">The Spaceship -
+                                                            ALLCLASS MGE Training</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">mge_training_v8_beta4b</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/32</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/gb.png"
+                                                    srcset="https://flagcdn.com/32x24/gb.png 2x, https://flagcdn.com/48x36/gb.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">UGC.TF
+                                                            | MGE Mod | EU</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">mge_training_v8_beta4b</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab w-full overflow-hidden custom-tab">
+                        <input class="absolute opacity-0" id="tab-multi-three" type="checkbox" name="tabs">
+                        <label class="block p-5 leading-normal cursor-pointer" for="tab-multi-three">Jumpserver</label>
+                        <div class="tab-content border-left-yellow leading-normal overflow-x-auto">
+                            <div class="p-5">
+                                <table class="min-w-full leading-normal" id="jumpServerTable">
+                                    <thead class="table-header">
+                                        <tr>
+                                            <th
+                                                class="px-5 py-3  text-left uppercase tracking-wider">
+
+                                            </th>
+                                            <th
+                                                class="px-5 py-3  text-left uppercase tracking-wider">
+                                                Jumpserver
+                                            </th>
+                                            <th
+                                                class="px-5 py-3  text-left uppercase tracking-wider">
+                                                Map
+                                            </th>
+                                            <th
+                                                class="px-5 py-3  text-left uppercase tracking-wider">
+                                                Players
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-body">
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">Echo Jump
+                                                            (Seattle, US)
+                                                            | Rank 400 Only | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_koro_b2</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">3/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/de.png"
+                                                    srcset="https://flagcdn.com/32x24/de.png 2x, https://flagcdn.com/48x36/de.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jumpacademy.tf
+                                                            | Easy
+                                                            &#43; Medium Demoman [17:03] | EU</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_aznbob_fixed</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/32</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/de.png"
+                                                    srcset="https://flagcdn.com/32x24/de.png 2x, https://flagcdn.com/48x36/de.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jumpacademy.tf
+                                                            | Easy
+                                                            &#43; Medium Soldier II [06:23] | EU</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_QuBA</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">3/32</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf -
+                                                            Advanced (Los
+                                                            Angeles) | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_glassydev_final</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf -
+                                                            Beginners
+                                                            (Los Angeles) | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_vape_rc3</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">5/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/de.png"
+                                                    srcset="https://flagcdn.com/32x24/de.png 2x, https://flagcdn.com/48x36/de.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf
+                                                            (Europe)
+                                                            Advanced #2 | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_rewind2</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/16</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/de.png"
+                                                    srcset="https://flagcdn.com/32x24/de.png 2x, https://flagcdn.com/48x36/de.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf
+                                                            (Europe)
+                                                            Beginner | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_void_b1</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf (Los
+                                                            Angeles) |
+                                                            All Maps #1 | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_doodle_b9</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">3/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf (Los
+                                                            Angeles) |
+                                                            All Maps #2 | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_abuq</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf (Los
+                                                            Angeles) |
+                                                            Rank 200 Only | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_joke_b4</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf (Los
+                                                            Angeles) |
+                                                            Rank 50 Only | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_aggregate_zip</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf (NY) |
+                                                            All Maps
+                                                            | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_demonstrationman_a4</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf (NY) |
+                                                            Rank 200
+                                                            Only | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_camp_rc2</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf (NY) |
+                                                            Rank 50
+                                                            Only | Tempus Jump Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_pandemonium</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/se.png"
+                                                    srcset="https://flagcdn.com/32x24/se.png 2x, https://flagcdn.com/48x36/se.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf
+                                                            (Sweden) | All
+                                                            Maps #1 | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_ziggurat_b3_zip</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/se.png"
+                                                    srcset="https://flagcdn.com/32x24/se.png 2x, https://flagcdn.com/48x36/se.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">jump.tf
+                                                            (Sweden) | Rank
+                                                            200 Only | Tempus Network</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">jump_drenched</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                        <tr id="content" region="america">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/us.png"
+                                                    srcset="https://flagcdn.com/32x24/us.png 2x, https://flagcdn.com/48x36/us.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">The Spaceship -
+                                                            Freestyle Jump Server</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">freestyle_lick2_b1</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/32</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab w-full overflow-hidden custom-tab">
+                        <input class="absolute opacity-0" id="tab-multi-four" type="checkbox" name="tabs">
+                        <label class="block p-5 leading-normal cursor-pointer" for="tab-multi-four">Casual</label>
+                        <div class="tab-content overflow-hidden border-left-yellow leading-normal overflow-x-auto">
+                            <div class="p-5">
+                                <table class="min-w-full leading-normal" id="casualTable">
+                                    <thead class="table-header">
+                                        <tr>
+                                            <th
+                                                class="px-5 py-3  text-left uppercase tracking-wider">
+
+                                            </th>
+                                            <th
+                                                class="px-5 py-3  text-left uppercase tracking-wider">
+                                                Casual
+                                            </th>
+                                            <th
+                                                class="px-5 py-3  text-left uppercase tracking-wider">
+                                                Map
+                                            </th>
+                                            <th
+                                                class="px-5 py-3  text-left uppercase tracking-wider">
+                                                Players
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-body">
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/se.png"
+                                                    srcset="https://flagcdn.com/32x24/se.png 2x, https://flagcdn.com/48x36/se.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">Gabagool&#39;s
+                                                            Rotating Halloween Workshop Maps! #1 (EU - TF2)</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">workshop/ctf_helltrain_event_v2
+                                                </p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/32</p>
+                                            </td>
+                                        </tr>
+                                        <tr region="europe" id="content">
+                                            <td class="px-5  " id="flag">
+                                                <img src="https://flagcdn.com/16x12/de.png"
+                                                    srcset="https://flagcdn.com/32x24/de.png 2x, https://flagcdn.com/48x36/de.png 3x"
+                                                    width="16" height="12">
+                                            </td>
+                                            <td class="px-5 py-5   text-sm" id="name">
+                                                <div class="flex items-center">
+                                                    <div class="ml-3">
+                                                        <a href="#" class=" whitespace-no-wrap">PUB FEVER |
+                                                            Payload &amp; KOTH</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">pl_barnblitz</p>
+                                            </td>
+                                            <td class="px-5 py-5   text-sm">
+                                                <p class=" whitespace-no-wrap">0/24</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="footer-background shadow rounded-lg">
+                <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+                    <nav class="flex flex-wrap justify-center">
+                        <div class="px-5 py-2">
+                            <a href="#" class="text-base leading-6  hover:">
+                                Add server
+                            </a>
+                        </div>
+                        <div class="px-5 py-2">
+                            <a href="#" class="text-base leading-6  hover:">
+                                Discord
+                            </a>
+                        </div>
+                        <div class="px-5 py-2">
+                            <a href="#" class="text-base leading-6  hover:">
+                                spenny.tf
+                            </a>
+                        </div>
+                        <div class="px-5 py-2">
+                            <a href="#" class="text-base leading-6  hover:">
+                                teamfortress.tv
+                            </a>
+                        </div>
+                        <div class="px-5 py-2">
+                            <a href="#" class="text-base leading-6  hover:">
+                                © 2021 Serverlist.tf
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js">
+        </script>
+        <script src="./js/script.js"></script>
+    </body>
+
+</html>

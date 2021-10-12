@@ -1,0 +1,255 @@
+@media (prefers-color-scheme: light) {
+    body {
+        background: rgba(232, 241, 255, 0.701);
+        color: #1d2b39;
+    }
+
+    .nav-background {
+        background-color: rgba(220, 234, 255, 0.701);
+        border-bottom: 0.5px solid #1d2b39;
+        color: #1d2b39;
+    }
+
+    .footer-background {
+        background-color: rgba(220, 234, 255, 0.701);
+        color: #1d2b39;
+    }
+
+    .select-box {
+        background-color: transparent;
+        border: 0.009rem solid #222831;
+    }
+
+    .tab input:checked+label {
+        padding: 1.25rem;
+        background-color: transparent;
+        color: #1d2b39;
+    }
+
+    .tab input[type=checkbox]+label::after {
+        content: "+";
+        font-weight: bold;
+        color: #1d2b39;
+    }
+
+    .tab input[type=radio]+label::after {
+        content: "\25BE";
+        font-weight: bold;
+    }
+
+    .custom-tab {
+        border-top: 1px solid #222831;
+    }
+
+
+    .table-header {
+        color: #1d2b39;
+    }
+
+    .tab input:checked+label {
+        color: #1d2b39;
+    }
+
+    th {
+        border-bottom: 1px solid #1d2b39 !important;
+        border-right: 1px solid #1d2b39 !important;
+        font-size: 14px;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1d2b39;
+        color: white;
+    }
+
+    .nav-background {
+        background-color: #222831;
+        border-bottom: 0.5px solid #dabe4f;
+    }
+
+    .footer-background {
+        background-color: #222831;
+    }
+
+    .select-box {
+        background-color: transparent;
+        border: 0.009rem solid #dabe4f;
+    }
+
+    .tab input:checked+label {
+        padding: 1.25rem;
+        background-color: transparent;
+    }
+
+    .tab input[type=checkbox]+label::after {
+        content: "+";
+    }
+
+    .tab input[type=radio]+label::after {
+        font-weight: bold;
+    }
+
+
+    .custom-tab {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+
+    .table-header {
+        background-color: #141d27;
+        color: #dabe4f;
+    }
+
+    .tab label {
+        color: #dabe4f;
+    }
+
+    .even {
+        background-color: #192431 !important;
+    }
+
+    th {
+        border-bottom: 1px solid #dabe4f !important;
+        border-right: 1px solid #dabe4f !important;
+        font-size: 14px;
+    }
+
+}
+
+
+
+.tab-content {
+    max-height: 0;
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+}
+
+.tab input:checked~.tab-content {
+    max-height: min-content;
+}
+
+
+
+.tab label::after {
+    float: right;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5;
+    text-align: center;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+
+
+
+
+.tab input[type=checkbox]:checked+label::after {
+    transform: rotate(315deg);
+}
+
+.tab input[type=radio]:checked+label::after {
+    transform: rotateX(180deg);
+}
+
+
+.table-body {
+    background-color: transparent !important;
+}
+
+table.dataTable tbody tr {
+    background-color: transparent;
+}
+
+table.dataTable thead .sorting_asc {
+    background-image: url('../imgs/angle-up-solid.svg') !important;
+}
+
+table.dataTable thead .sorting_desc {
+    background-image: url('../imgs/angle-down-solid.svg') !important;
+}
+
+table.dataTable thead .sorting {
+    background-image: url('../imgs/sort-both.svg');
+    height: 10px;
+}
+
+
+
+th:last-child {
+    border-right: none !important;
+}
+
+th:first-child {
+    border-right: none !important;
+}
+
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
